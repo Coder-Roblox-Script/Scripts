@@ -4,6 +4,7 @@ local gameInfo = game:GetService("MarketplaceService"):GetProductInfo(placeId)
 
 local GamesList = {
 	"8003084678",
+	"286090429",
 }
 
 local isSupported = table.find(GamesList, tostring(placeId)) ~= nil
@@ -25,7 +26,7 @@ ScriptsSection:NewButton("Load Script", "ButtonInfo", function()
 
 	if isCurrentlySupported then
 		print("Game is supported! Loading script...")
-		--Here
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Coder-Roblox-Script/Scripts/refs/heads/main/"..game.PlaceId..".lua"))()
 		print("Script loaded and executed.")
 	else
 		print("Game is not supported.")
