@@ -2,7 +2,7 @@ local placeId = game.PlaceId
 local gameInfo = game:GetService("MarketplaceService"):GetProductInfo(placeId)
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("gameInfo.Name", "BloodTheme") 
+local Window = Library.CreateLib(gameInfo.Name, "BloodTheme") 
 local TeleportTab = Window:NewTab("Teleport")
 
 local function teleportToNextStage(stageNumber, currentStageValue, stageValue)
